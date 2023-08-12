@@ -1,0 +1,270 @@
+{
+	"info": {
+		"_postman_id": "e1bb5f55-f810-4ec4-b5d3-de82c5bc885c",
+		"name": "Six Degrees API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28897918"
+	},
+	"item": [
+		{
+			"name": "addActor",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Kevin Bacon\",\n    \"actorId\": \"nm0000102\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/addActor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"addActor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addMovie",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Apollo 13\",\n    \"movieId\": \"mv0000194\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/addMovie",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"addMovie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addRelationship",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"actorId\": \"nm0000102\",\n    \"movieId\": \"mv0000194\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/addRelationship",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"addRelationship"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getActor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/getActor?actorId=nm0000102",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"getActor"
+					],
+					"query": [
+						{
+							"key": "actorId",
+							"value": "nm0000102"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getMovie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/getMovie?movieId=mv0000194",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"getMovie"
+					],
+					"query": [
+						{
+							"key": "movieId",
+							"value": "mv0000194"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hasRelationship",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/hasRelationship?actorId=nm0000102&movieId=mv0000194",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"hasRelationship"
+					],
+					"query": [
+						{
+							"key": "actorId",
+							"value": "nm0000102"
+						},
+						{
+							"key": "movieId",
+							"value": "mv0000194"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "computeBaconNumber",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/computeBaconNumber?actorId=nm0000102",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"computeBaconNumber"
+					],
+					"query": [
+						{
+							"key": "actorId",
+							"value": "nm0000102"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "computeBaconPath",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/computeBaconPath?actorId=nm0000102",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"computeBaconPath"
+					],
+					"query": [
+						{
+							"key": "actorId",
+							"value": "nm0000102"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCommonMovies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/getCommonMovies?actor1Id=nm0000102&actor2Id=nm0000102",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"getCommonMovies"
+					],
+					"query": [
+						{
+							"key": "actor1Id",
+							"value": "nm0000102"
+						},
+						{
+							"key": "actor2Id",
+							"value": "nm0000102"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
